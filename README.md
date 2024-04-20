@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ÇRÈÉPÊRS - Consulting Firm</title>
     <style>
-        /* Styles here */
+        /* Add your styles here */
     </style>
 </head>
 <body>
@@ -24,7 +24,7 @@
             <p>We specialize in helping companies find the right candidates for their job openings.</p>
             <!-- Add more content here if needed -->
         </section>
-        <section id="services" class="visible">
+        <section id="services">
             <h2>Our Services</h2>
             <ul>
                 <li>Recruitment and Staffing</li>
@@ -49,7 +49,7 @@
             var sections = document.querySelectorAll('section');
             sections.forEach(function(section) {
                 if (section.id === sectionId) {
-                    section.classList.toggle('visible');
+                    section.classList.add('visible');
                 } else {
                     section.classList.remove('visible');
                 }
