@@ -47,6 +47,10 @@
             margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        .visible {
+            display: block;
         }
         footer {
             background-color: #800080; /* Deep Purple */
@@ -85,17 +89,19 @@
         <h1>ÇRÈÉPÊRS - Consulting Firm</h1>
     </header>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <button onclick="toggleSection('home')">Home</button>
+        <button onclick="toggleSection('services')">Services</button>
+        <button onclick="toggleSection('contact')">Contact</button>
     </nav>
     <div class="container">
-        <section id="home">
+        <section id="home" class="visible">
             <h2>Welcome to ÇRÈÉPÊRS - Consulting Firm</h2>
+            <img src="C:\Users\avina\Downloads\building-consulting-business.gif" alt="Building Consulting Business" style="max-width: 100%;">
             <p>We specialize in helping companies find the right candidates for their job openings.</p>
+            <img src="image2.jpg" alt="Image 2" style="max-width: 100%;">
             <p>Contact us today to learn more about how we can assist you in your hiring process.</p>
         </section>
-        <section id="services">
+        <section id="services" class="visible">
             <h2>Our Services</h2>
             <ul>
                 <li>Recruitment and Staffing</li>
@@ -107,7 +113,7 @@
         <section id="contact">
             <h2>Contact Us</h2>
             <div class="contact-info">
-                <p>Email: <a href="mailto:ak3578431@gmail.com" style="color: #333;">ak3578431@gmail.com</a>, <a href="mailto:Thakurdivyanshu0@gmail.com" style="color: #333;">Thakurdivyanshu0@gmail.com</a></p>
+                <p>Email: <a href="mailto:creepers242024@gmail.com" style="color: #333;">creepers242024@gmail.com</a>, <a href="mailto:Thakurdivyanshu0@gmail.com" style="color: #333;">Thakurdivyanshu0@gmail.com</a></p>
                 <p>Phone: <a href="tel:+919834370888" style="color: #333;">+91 9834370888</a>, <a href="tel:+916200627779" style="color: #333;">+91 6200627779</a></p>
                 <p>Location: New Kalimati Road, Sakchi, Jamshedpur, Jharkhand - 831001</p>
             </div>
@@ -116,5 +122,18 @@
     <footer>
         <p>&copy; 2024 ÇRÈÉPÊRS - Consulting Firm. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                if (section.id === sectionId) {
+                    section.classList.toggle('visible');
+                } else {
+                    section.classList.remove('visible');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
